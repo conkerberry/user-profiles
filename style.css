@@ -1,0 +1,123 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #feafd0; 
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9bedc; 
+}
+
+header h1 {
+  flex-grow: 1;
+  text-align: center;
+}
+
+header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px; 
+}
+
+#toggle-dark-mode i {
+  font-size: 24px; 
+}
+
+#add-profile {
+  font-size: 18px; 
+  border: 2px solid black; 
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff; 
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+#add-profile:hover {
+  background-color: #f0f0f0; 
+  border-color: #333;
+}
+
+#profile-container {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.profile-box {
+  border: 3px solid black; 
+  padding: 20px; 
+  width: 220px; 
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-box img {
+  width: 100%; 
+  height: auto; 
+}
+
+.profile-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  text-align: left;
+  width: 100%;
+}
+
+.profile-box:hover .profile-actions {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+#profile-details img {
+  max-width: 150px;
+  height: auto;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode header {
+  background-color: #444;
+}
+
+.dark-mode .profile-box {
+  background-color: #444;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .profile-box {
+    width: 100%;
+  }
+}
